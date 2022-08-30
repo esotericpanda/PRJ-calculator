@@ -13,7 +13,7 @@ function subtract(x, y) {
 
 function divide(x, y) {
     if(y===0) return "Don't";
-    return x / y;
+    return Math.floor((x/y)*1000)/1000;
 }
 
 function operate(x, operator, y) {
