@@ -43,6 +43,7 @@ function performLastOperation(){
         memorizedValue=0;
         chosenKey='';
         displayedValue=0;
+        return;
     }
     memorizedValue=0;
     displayedValue=result;
