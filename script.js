@@ -1,3 +1,4 @@
+
 function add(x, y) {
     return x + y;
 }
@@ -27,6 +28,23 @@ function operate(x, operator, y) {
     }
 }
 
-const foo = document.querySelector('#test');
+function updateDisplayedValue(x){
+    displayedValue*=10;
+    displayedValue+= +x;
+    display.textContent=displayedValue
+}
 
-console.log(foo.textContent)
+
+
+const display=document.querySelector(".display");
+
+let displayedValue=0;
+display.textContent=displayedValue;
+
+const digitKeys=[...document.querySelectorAll(".digit")];
+digitKeys.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        updateDisplayedValue(btn.textContent);
+        console.log(btn.textContent)
+    })
+})
