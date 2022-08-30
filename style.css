@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    background-color: black;
+    border-radius: 8px;
+}
+
+.display,
+.keypad{
+    margin: 8px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.display{
+    height: 200px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 96px;
+}
+
+.keypad{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 400px;
+    height:400px;
+
+}
+
+.keypad *{
+    font-size: 48px;
+}
+
+.row{
+    flex:1;
+    display: flex;
+}
+
+.row button{
+    flex: 1;
+    margin: 4px;
+    border-radius: 8px;
+    border-style: none;
+}

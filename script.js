@@ -22,7 +22,11 @@ function operate(x, operator, y) {
             return add(x, y);
         case "*":
             return multiply(x, y);
-        case "/":
+        case "÷":
             return divide(x, y);
     }
 }
+
+const foo = document.querySelector('#test');
+
+console.log(foo.textContent)
