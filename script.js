@@ -12,6 +12,7 @@ function subtract(x, y) {
 }
 
 function divide(x, y) {
+    if(y===0) return "Don't";
     return x / y;
 }
 
@@ -37,6 +38,12 @@ function updateDisplayedValue(x){
 function performLastOperation(){
     if(!chosenKey) return;
     let result= operate(memorizedValue, chosenKey, displayedValue);
+    if(result==="Don't") {
+        display.textContent=result;
+        memorizedValue=0;
+        chosenKey='';
+        displayedValue=0;
+    }
     memorizedValue=0;
     displayedValue=result;
     display.textContent=result;
